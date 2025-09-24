@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<head>
+    <title>Banco Luz</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            background: #f5f5f5;
+            color: #333;
+        }
+
+        header {
+            display: flex;         
+            justify-content: space-between; 
+            align-items: center;        
+            background: #f5f5f5;
+            padding: 10px 20px;
+            border-radius: 8px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 22px;
+            color: #2c3e50;
+        }
+
+        header ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;                  
+            margin: 0;
+            padding: 0;
+        }
+
+        header ul li {
+            padding: 6px 12px;
+            border-radius: 6px;
+        }
+
+        header ul li a {
+            color: black;
+            text-decoration: none;
+        }
+        header a {
+            text-decoration: none;
+        }
+
+        header a:hover {
+            color: #2980b9;
+        }
+        header ul li ul {
+            display: none;
+            position: absolute;
+            top: 100%; 
+            left: 0;
+            background: #ffffff;
+            border: 1px solid #ccc;
+            min-width: 180px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+            padding: 5px 0;
+            z-index: 1000;
+        }
+        header ul li:hover > ul {
+            display: block;
+        }
+        
+        header ul li {
+            position: relative;
+        }
+        
+        .carrusel {
+            position: relative;
+            width: 100%;
+            max-width: 1100px;
+            margin: 40px auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .slides {
+            display: flex;
+            width: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slides img {
+            width: 100%;
+            flex-shrink: 0;
+        }
+
+        .boton {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0,0,0,0.5);
+            color: #fff;
+            font-size: 24px;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 50%;
+        }
+
+        .boton:hover {
+            background: rgba(0,0,0,0.8);
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#Canales"><strong>Canales ▾</strong></a>
+                    <ul>
+                        <h4 style="margin: 10px;">Personal</h4>
+                        <li><a href="#">Oficinas</a></li>
+                        <li><a href="#">App</a></li>
+                        <li><a href="#">Cajeros</a></li>
+                        <h4 style="margin: 10px;">Empresarial</h4>
+                        <li><a href="#">Tu banco empresa</a></li>
+                        <li><a href="#">Subagentes</a></li>
+                    </ul>
+                </li>
+                <li><a href="#Sobre_nosotros"><strong>Sobre nosotros ▾</strong></a>
+                    <ul>
+                        <li><a href="#">Visión, Misión y Valores</a></li>
+                        <li><a href="#">Noticias</a></li>
+                        <li><a href="#">Voluntariado</a></li>
+                    </ul>
+                </li>
+                <li><a href="#Calculadora"><strong>Calculadora</strong></a></li>
+                <li><a href="#Mapa"><strong>Mapa</strong></a></li>
+                <li><a href="#AccederCuenta"><strong>Acceder a cuenta▾</strong></a>
+                    <ul>
+                        <h4 style="margin: 10px;">Personal</h4>
+                        <li><a href="#">Administrar cuenta</a></li>
+                        <h4 style="margin: 10px;">Empresa</h4>
+                        <li><a href="#">Manejar tu empresa</a></li>
+                        <h4 style="margin: 10px;">Suscrición</h4>
+                        <li><a href="#">Tu banco personal</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <p>Dolar Compra 60.70 | Venta 62.70</p>
+    </header>
+
+    <header>
+        <h1><a href="index.html">Banco Luz</a></h1>
+        <nav>
+            <ul>
+                <li><a href="#PERSONAL"><strong>PERSONAL</strong></a></li>
+                <li><a href="#PREFERENTE"><strong>PREFERENTE</strong></a></li>
+                <li><a href="#PYME"><strong>PYME</strong></a></li>
+                <li><a href="#EMPRESARIAL"><strong>EMPRESARIAL</strong></a></li>
+                <li><a href="#GUBERNAMENTAL"><strong>GUBERNAMENTAL</strong></a></li>
+                <li><a href="#INTERNACIONAL"><strong>INTERNACIONAL</strong></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <header style="justify-content: center; background: #069625;">
+        <nav>
+            <ul>
+                <li><a href="#CUENTAS"><strong>CUENTAS</strong></a>
+                    <ul>
+                        <li><a href="#">Cuentas de ahorro</a></li>
+                        <li><a href="#">Cuentas de corriente</a></li>
+                    </ul>
+                </li>
+                <li><a href="#INVERSIONES"><strong>INVERSIONES</strong></a>
+                    <ul>
+                        <li><a href="#">Deposito a plazo</a></li>
+                        <li><a href="#">Mercado de valores</a></li>
+                    </ul>
+                </li>
+                <li><a href="#TARJETAS"><strong>TARJETAS</strong></a>
+                    <ul>
+                        <li><a href="#">Tarjetas de debito</a></li>
+                        <li><a href="#">Tarjetas de crédito</a></li>
+                    </ul>
+                </li>
+                <li><a href="#PRESTAMOS"><strong>PRESTAMOS</strong></a>
+                    <ul>
+                        <li><a href="#">Préstamos personales</a></li>
+                        <li><a href="#">Préstamos hipoterarios</a></li>
+                        <li><a href="#">Préstamos vehiculos</a></li>
+                    </ul>
+                </li>
+                <li><a href="#SEGUROS"><strong>SEGUROS</strong></a>
+                    <ul>
+                        <li><a href="#">Riesgos generales</a></li>
+                        <li><a href="#">Seguros personales</a></li>
+                    </ul>
+                </li>
+                <li><a href="#REMESAS"><strong>REMESAS</strong></a></li>
+                <li><a href="#ATENCION"><strong>ATENCION AL CLIENTE</strong></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="carrusel">
+        <div class="slides">
+            <img src="https://caminoalsol.do/wp-content/uploads/2024/01/Seguros1.jpeg" alt="Imagen 1">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4bxNltl7GMS8z--HfbDjcIe_iZsAofM4LKw&s" alt="Imagen 2">
+            <img src="https://www.pnc.com/content/dam/pnc-thought-leadership/personal-finance/save/pnc_insights_sb_what-is-savings-account-how-does-it-work.jpg" alt="Imagen 3">
+            <img src="https://e01-elmundo.uecdn.es/assets/multimedia/imagenes/2025/08/28/17563836732312.jpg" alt="Imagen 1">
+            <img src="https://seguros.elcorteingles.es/content/dam/eci-seguros/es/blog/blog_thumbnails_xl/729b2-presta-mi-dinero-el-banco-para-dar-creditos.jpg" alt="Imagen 1">
+        </div>
+
+        <button class="btn prev">&#10094;</button>
+        <button class="btn next">&#10095;</button>
+    </div>
+
+    <script>
+        const slides = document.querySelector('.slides');
+        const images = document.querySelectorAll('.slides img');
+        const prevBtn = document.querySelector('.prev');
+        const nextBtn = document.querySelector('.next');
+
+        let index = 0;
+        const total = images.length;
+
+        function showSlide(i) {
+            index = (i + total) % total;
+            slides.style.transform = `translateX(${-index * 100}%)`;
+        }
+
+        prevBtn.addEventListener('click', () => showSlide(index - 1));
+        nextBtn.addEventListener('click', () => showSlide(index + 1));
+
+        setInterval(() => {
+            showSlide(index + 1);
+        }, 5000);
+    </script>
+
+    <footer style="background-color:#222; color:#fff; text-align:center; padding:20px; margin-top:40px;">
+        <p>&copy; 2025 Banco Luz | Todos los derechos reservados</p>
+        <p>Diseñado por Robert Plaza</p>
+    </footer>
+
+</body>
+
+</html>
